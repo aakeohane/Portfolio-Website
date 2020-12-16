@@ -405,7 +405,7 @@ label  {
   }
 }
 
-/* two ways to do the spin but both need transform-origin and box*/
+/* two ways to do the spin but both need transform-origin and box */
 @keyframes rotate-tennis-ball {
   from {
     transform: rotateZ(0deg);
