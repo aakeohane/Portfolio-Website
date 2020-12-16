@@ -1,0 +1,429 @@
+/*
+Colors used:
+Text color: light black: #2f2e2e
+Primary color: blue: #376aa2;
+Secondary color: light teal: #2c797c
+*/
+* {
+  box-sizing: border-box;
+}
+
+:root  {
+  --primary-color: #376aa2;
+  --secondary-color: #2c797c;
+  --light-black: #2f2e2e;
+  --grid-background: #f1f1f1;
+  --font-size-navigation: 25px;
+}
+
+html,
+body  {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.maincontents  {
+  flex: 1;
+}
+
+.page-header  {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.page-header__item  {
+  flex: 0 1 100px;
+  width: 100px;
+}
+
+.page-header__item:last-child  {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list  {
+  list-style-type: none;
+}
+
+.navigation-list li  {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item--active  {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: var(--font-size-navigation);
+}
+
+.navigation-list__item  {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: font-size 1s ease;
+}
+
+.navigation-list__item:hover  {
+  text-decoration: none;
+  font-size: var(--font-size-navigation);
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__portrait  {
+  max-width: 400px;
+  width: 100%;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.profile--intro  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+svg#tennis-scene  {
+  max-width: 500px;
+  width: 100%;
+}
+
+body  {
+  background-color: white;
+  font-family: 'playfair display', serif;
+  font-size: 20px;
+  color: #2f2e2e;
+  padding: 10px;
+}
+
+h1  {
+  font-family: 'bebas neue', sans-serif;
+  color: var(--primary-color);
+  display: block;
+  text-align: center;
+  font-size: 45px;
+}
+
+h2  {
+  font-family: 'bebas neue', sans-serif;
+  color: var(--primary-color);
+  font-size: 35px;
+}
+
+p  {
+  line-height: 150%;
+  text-align: center;
+  margin: -5px 0 20px;
+}
+
+table  {
+  background-color: var(--grid-background);
+  padding: 10px;
+  width: 500px;
+}
+
+th  {
+  font-family: 'bebas neue', sans-serif;
+  color: var(--primary-color);
+  font-size: 30px;
+  text-align: left;
+}
+
+.profile--webfont	 {
+  color: lime;
+  font-family: 'vt323', sans-serif;
+  font-size: 25px;
+  background-color: black;
+  padding: 0 3px;
+}
+
+a	 {
+  transition: color 1s ease;
+  color: var(--secondary-color);
+  font-family: 'bebas neue', sans-serif;
+}
+
+.github-icon path  {
+  transition: 0.9s fill;
+}
+
+.github-icon:hover path  {
+  fill: #6879d9;
+}
+
+.twitter-icon path  {
+  transition: 0.9s fill;
+}
+
+.twitter-icon:hover path  {
+  fill: #1da1f2;
+}
+
+.linkedin-icon path  {
+  transition: 0.9s fill;
+}
+
+.linkedin-icon:hover path  {
+  fill: #0e76a8;
+}
+
+a:hover a:focus  {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+button,
+.form__button,
+#about__button	{
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+
+  /* styling */
+  font-family: 'bebas neue', sans-serif;
+  color: white;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 0 0 25px -5px var(--secondary-color);
+  transition: 0.9s opacity;
+}
+
+button:hover,
+button:focus,
+.form__button:hover,
+.form__button:focus,
+#about__button:hover,
+#about__button:focus {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.page-footer	{
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-footer p	{
+  margin: 20px 0 0;
+}
+
+.work--header	 {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grid__item  {
+  background-color: var(--grid-background);
+  padding: 10px;
+}
+
+.grid	 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.grid__item:last-child	{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.flex-contact  {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-header  {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info  {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.contact-form  {
+  max-width: 400px;
+  width: 100%;
+}
+
+#contact-form  {
+  background: var(--grid-background);
+  padding: 25px;
+  margin: 0 0 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+label  {
+  display: block;
+}
+
+#contact-form input[type="email"],
+#contact-form input[type="text"],
+#contact-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 5px;
+}
+
+#contact-form textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+.form__button {
+  display: block;
+  margin: 10px auto;
+}
+
+.grid p {
+  text-align: left;
+}
+
+/* Responsive Design Elements -- small screens */
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Design Elements -- between 500px and 750px screens */
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Responsive Design Elements -- between 0px and 750px screens = shared code */
+@media all and (max-width: 750px)   {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__portrait  {
+    margin: 0 auto;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    margin: 20px 0 0;
+    font-size: 35px;
+  }
+
+  p  {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  svg#tennis-scene  {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+/* Animations */
+
+@keyframes color-change {
+  0% {
+    fill: #c6ff00;
+  }
+
+  50% {
+    fill: #edf09f;
+  }
+
+  100% {
+    fill: #f38508;
+  }
+}
+
+.background__shiftingneon {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes tennis-ball-flying {
+  from {
+    transform: translate(0, -30px);
+  }
+
+  to {
+    transform: translate(-230px, 130px);
+  }
+}
+
+@keyframes line-drive {
+  from {
+    transform: translate(-230px, 130px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+/* two ways to do the spin but both need transform-origin and box*/
+@keyframes rotate-tennis-ball {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to  {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.tennis-ball {
+  animation: tennis-ball-flying 5s infinite normal linear;
+}
+
+#Tennis {
+  animation: spin 0.5s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
