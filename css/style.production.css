@@ -210,6 +210,13 @@ a	 {
   font-family: 'bebas neue', sans-serif;
 }
 
+a:hover,
+a:focus  {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 .github-icon path  {
   -webkit-transition: 0.9s fill;
   -o-transition: 0.9s fill;
@@ -238,13 +245,6 @@ a	 {
 
 .linkedin-icon:hover path  {
   fill: #0e76a8;
-}
-
-a:hover,
-a:focus  {
-  /* No underlining when hovering over a link */
-  text-decoration: none;
-  color: var(--primary-color);
 }
 
 button,
