@@ -155,9 +155,16 @@ th  {
 }
 
 a	 {
-  transition: color 1s ease;
+  transition: 1s color ease;
   color: var(--secondary-color);
   font-family: 'bebas neue', sans-serif;
+}
+
+a:hover,
+a:focus  {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 .github-icon path  {
@@ -182,12 +189,6 @@ a	 {
 
 .linkedin-icon:hover path  {
   fill: #0e76a8;
-}
-
-a:hover a:focus  {
-  /* No underlining when hovering over a link */
-  text-decoration: none;
-  color: var(--primary-color);
 }
 
 button,
