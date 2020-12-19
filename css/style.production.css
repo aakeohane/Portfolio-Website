@@ -202,21 +202,6 @@ th  {
   padding: 0 3px;
 }
 
-a	 {
-  -webkit-transition: color 1s ease;
-  -o-transition: color 1s ease;
-  transition: color 1s ease;
-  color: var(--secondary-color);
-  font-family: 'bebas neue', sans-serif;
-}
-
-a:hover,
-a:focus  {
-  /* No underlining when hovering over a link */
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
 .github-icon path  {
   -webkit-transition: 0.9s fill;
   -o-transition: 0.9s fill;
@@ -245,6 +230,21 @@ a:focus  {
 
 .linkedin-icon:hover path  {
   fill: #0e76a8;
+}
+
+a	 {
+  -webkit-transition: 1s color ease;
+  -o-transition: 1s color ease;
+  transition: 1s color ease;
+  color: var(--secondary-color);
+  font-family: 'bebas neue', sans-serif;
+}
+
+a:hover,
+a:focus  {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 button,
