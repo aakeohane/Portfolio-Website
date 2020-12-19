@@ -136,7 +136,8 @@ p  {
 table  {
   background-color: var(--grid-background);
   padding: 10px;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
 }
 
 th  {
@@ -230,6 +231,10 @@ button:focus,
   margin: 20px 0 0;
 }
 
+#footer_vector-source  {
+  font-size: 15px;
+}
+
 .work--header	 {
   display: block;
   text-align: center;
@@ -319,6 +324,23 @@ label  {
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  h2  {
+    font-size: 25px;
+  }
+
+  table  {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  th  {
+    font-size: 20px;
+  }
+
+  td  {
+    font-size: 15px;
   }
 }
 

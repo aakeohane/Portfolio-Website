@@ -16,14 +16,6 @@ Secondary color: light teal: #2c797c
           box-sizing: border-box;
 }
 
-:root  {
-  --primary-color: #376aa2;
-  --secondary-color: #2c797c;
-  --light-black: #2f2e2e;
-  --grid-background: #f1f1f1;
-  --font-size-navigation: 25px;
-}
-
 html,
 body  {
   display: -webkit-box;
@@ -79,13 +71,13 @@ body  {
 
 .navigation-list__item--active  {
   text-decoration: none;
-  color: var(--primary-color);
-  font-size: var(--font-size-navigation);
+  color: #376aa2;
+  font-size: 25px;
 }
 
 .navigation-list__item  {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: #2c797c;
   -webkit-transition: font-size 1s ease;
   -o-transition: font-size 1s ease;
   transition: font-size 1s ease;
@@ -93,7 +85,7 @@ body  {
 
 .navigation-list__item:hover  {
   text-decoration: none;
-  font-size: var(--font-size-navigation);
+  font-size: 25px;
 }
 
 .profile {
@@ -163,7 +155,7 @@ body  {
 
 h1  {
   font-family: 'bebas neue', sans-serif;
-  color: var(--primary-color);
+  color: #376aa2;
   display: block;
   text-align: center;
   font-size: 45px;
@@ -171,7 +163,7 @@ h1  {
 
 h2  {
   font-family: 'bebas neue', sans-serif;
-  color: var(--primary-color);
+  color: #376aa2;
   font-size: 35px;
 }
 
@@ -182,14 +174,15 @@ p  {
 }
 
 table  {
-  background-color: var(--grid-background);
+  background-color: #f1f1f1;
   padding: 10px;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
 }
 
 th  {
   font-family: 'bebas neue', sans-serif;
-  color: var(--primary-color);
+  color: #376aa2;
   font-size: 30px;
   text-align: left;
 }
@@ -200,6 +193,26 @@ th  {
   font-size: 25px;
   background-color: black;
   padding: 0 3px;
+}
+
+a	 {
+  -webkit-transition: 1s color ease;
+  -o-transition: 1s color ease;
+  transition: 1s color ease;
+  color: #2c797c;
+  font-family: 'bebas neue', sans-serif;
+}
+
+a:hover  {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: #376aa2;
+}
+
+a:focus  {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: #376aa2;
 }
 
 .github-icon path  {
@@ -232,23 +245,44 @@ th  {
   fill: #0e76a8;
 }
 
-a	 {
-  -webkit-transition: 1s color ease;
-  -o-transition: 1s color ease;
-  transition: 1s color ease;
-  color: var(--secondary-color);
+button	{
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+
+  /* styling */
   font-family: 'bebas neue', sans-serif;
-}
-
-a:hover,
-a:focus  {
-  /* No underlining when hovering over a link */
+  color: white;
+  background-color: #376aa2;
   text-decoration: none;
-  color: var(--primary-color);
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 25px -5px #2c797c;
+          box-shadow: 0 0 25px -5px #2c797c;
+  -webkit-transition: 0.9s opacity;
+  -o-transition: 0.9s opacity;
+  transition: 0.9s opacity;
 }
 
-button,
-.form__button,
+.form__button	{
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+
+  /* styling */
+  font-family: 'bebas neue', sans-serif;
+  color: white;
+  background-color: #376aa2;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 25px -5px #2c797c;
+          box-shadow: 0 0 25px -5px #2c797c;
+  -webkit-transition: 0.9s opacity;
+  -o-transition: 0.9s opacity;
+  transition: 0.9s opacity;
+}
+
 #about__button	{
   /* overwrites browser defaults and resets the border */
   border: none;
@@ -257,12 +291,12 @@ button,
   /* styling */
   font-family: 'bebas neue', sans-serif;
   color: white;
-  background-color: var(--primary-color);
+  background-color: #376aa2;
   text-decoration: none;
   border-radius: 3px;
   padding: 10px;
-  -webkit-box-shadow: 0 0 25px -5px var(--secondary-color);
-          box-shadow: 0 0 25px -5px var(--secondary-color);
+  -webkit-box-shadow: 0 0 25px -5px #2c797c;
+          box-shadow: 0 0 25px -5px #2c797c;
   -webkit-transition: 0.9s opacity;
   -o-transition: 0.9s opacity;
   transition: 0.9s opacity;
@@ -294,6 +328,10 @@ button:focus,
   margin: 20px 0 0;
 }
 
+#footer_vector-source  {
+  font-size: 15px;
+}
+
 .work--header	 {
   display: block;
   text-align: center;
@@ -301,7 +339,7 @@ button:focus,
 }
 
 .grid__item  {
-  background-color: var(--grid-background);
+  background-color: #f1f1f1;
   padding: 10px;
 }
 
@@ -359,7 +397,7 @@ button:focus,
 }
 
 #contact-form  {
-  background: var(--grid-background);
+  background: #f1f1f1;
   padding: 25px;
   margin: 0 0 20px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -400,6 +438,23 @@ label  {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  h2  {
+    font-size: 25px;
+  }
+
+  table  {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  th  {
+    font-size: 20px;
+  }
+
+  td  {
+    font-size: 15px;
   }
 }
 
