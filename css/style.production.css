@@ -175,6 +175,12 @@ p  {
   margin: -5px 0 20px;
 }
 
+.table  {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 table  {
   background-color: #f1f1f1;
   padding: 10px;
@@ -182,6 +188,7 @@ table  {
   max-width: 500px;
   width: 100%;
 }
+
 
 th  {
   font-family: 'bebas neue', sans-serif;
