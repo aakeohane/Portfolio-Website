@@ -331,7 +331,11 @@ button:focus,
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  flex: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: end;
+      -ms-flex: end;
+          flex: end;
 }
 
 .page-footer p	{
