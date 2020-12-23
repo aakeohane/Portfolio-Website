@@ -34,13 +34,6 @@ body  {
       -ms-flex: 1;
           flex: 1;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .page-header  {
@@ -340,6 +333,9 @@ button:focus,
   text-align: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-box-flex: end;
+      -ms-flex: end;
+          flex: end;
   margin-top: auto;
 }
 
