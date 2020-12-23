@@ -336,6 +336,7 @@ button:focus,
   -webkit-box-flex: end;
       -ms-flex: end;
           flex: end;
+  margin-top: auto;
 }
 
 .page-footer p	{
