@@ -21,8 +21,7 @@ body  {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vm;
-  height: 100px;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -330,6 +329,7 @@ button:focus,
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  flex: none;
 }
 
 .page-footer p	{
