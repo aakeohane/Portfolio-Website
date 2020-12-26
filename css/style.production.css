@@ -332,9 +332,7 @@ button:focus,
           flex-direction: column;
   text-align: center;
   margin-top: auto;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  flex: 0 1 auto;
 }
 
 .page-footer p	{
@@ -389,9 +387,6 @@ button:focus,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
 }
 
 .contact-header  {
@@ -410,9 +405,6 @@ button:focus,
 .contact-form  {
   max-width: 400px;
   width: 100%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
 }
 
 #contact-form  {
