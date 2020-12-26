@@ -331,10 +331,8 @@ button:focus,
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
   margin-top: auto;
+  flex: 0 1 auto;
 }
 
 .page-footer p	{
