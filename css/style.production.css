@@ -365,7 +365,7 @@ button:focus,
 .grid__item:last-child	{
   -ms-grid-column: 3;
       grid-column-start: 3;
-  -ms-grid-column-span: 0;
+  -ms-grid-column-span: 1;
   grid-column-end: 3;
   -ms-grid-row: 1;
       grid-row-start: 1;
