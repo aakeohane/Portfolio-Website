@@ -331,11 +331,9 @@ button:focus,
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: end;
-      -ms-flex: end;
-          flex: end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
   margin-top: auto;
 }
 
