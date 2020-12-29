@@ -15,20 +15,17 @@ Secondary color: light teal: #2c797c
 /* page layout */
 
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .maincontents {
   min-height: 100vh;
-  height: 1px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10px 1fr 10px;
   grid-template-columns: 10px 1fr 10px;
-  -ms-grid-rows: 125px 1fr 125px;
+  -ms-grid-rows: auto 1fr auto;
   grid-template-rows: auto 1fr auto;
           grid-template-areas:
     ". header ."
@@ -212,7 +209,7 @@ table  {
           flex: 1;
   max-width: 500px;
   width: 100%;
-  min-height: 100%;
+  margin-top: 30px;
 }
 
 th  {
