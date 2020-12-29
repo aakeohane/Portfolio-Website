@@ -12,12 +12,53 @@ Primary color: blue: #376aa2;
 Secondary color: light teal: #2c797c
 */
 
+/* page layout */
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.maincontents {
+  min-height: 100vh;
+  height: 1px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10px 1fr 10px;
+  grid-template-columns: 10px 1fr 10px;
+  -ms-grid-rows: 125px 1fr 125px;
+  grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer .";
+  background-color: #fafafa;
+}
+
+.page-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header;
+  margin: 10px 0;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.page-footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: footer;
+}
+
+/* navigation */
 
 .page-header  {
   display: -webkit-box;
@@ -72,6 +113,8 @@ Secondary color: light teal: #2c797c
   font-size: 25px;
 }
 
+/* homepage layout */
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
@@ -109,6 +152,8 @@ Secondary color: light teal: #2c797c
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 220px; 
+  height:100px
 }
 
 .about-me  {
@@ -167,6 +212,7 @@ table  {
           flex: 1;
   max-width: 500px;
   width: 100%;
+  min-height: 100%;
 }
 
 th  {
@@ -329,30 +375,6 @@ button:focus,
   display: block;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.grid__item  {
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-.grid	 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.grid__item:last-child	{
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  -ms-grid-column-span: 1;
-  grid-column-end: 3;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  -ms-grid-row-span: 2;
-  grid-row-end: 3;
 }
 
 .flex-contact  {
@@ -624,42 +646,6 @@ label  {
 }
 
 /* grid flow testing*/
-
-.maincontents {
-  min-height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 10px 1fr 10px;
-  grid-template-columns: 10px 1fr 10px;
-  -ms-grid-rows: 125px 1fr 125px;
-  grid-template-rows: auto 1fr auto;
-          grid-template-areas:
-    ". header ."
-    ". main ."
-    ". footer .";
-  background-color: #fafafa;
-}
-
-.page-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: header;
-  margin: 10px 0;
-}
-
-.main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: main;
-  -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.page-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: footer;
-}
 
 .grid > div {
   background-color: #f1f1f1;
