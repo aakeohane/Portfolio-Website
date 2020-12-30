@@ -12,7 +12,7 @@ Primary color: blue: #376aa2;
 Secondary color: light teal: #2c797c
 */
 
-/* page layout */
+/* site layout */
 
 * {
   -webkit-box-sizing: border-box;
@@ -38,7 +38,7 @@ Secondary color: light teal: #2c797c
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: header;
-  margin: 10px 0;
+  margin-top: 20px;
 }
 
 .main {
@@ -182,9 +182,10 @@ body  {
 h1  {
   font-family: 'bebas neue', sans-serif;
   color: #376aa2;
-  display: block;
   text-align: center;
   font-size: 45px;
+  vertical-align: top;
+  margin-top: 0;
 }
 
 h2  {
@@ -319,8 +320,6 @@ button	{
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
-
-  /* styling */
   font-family: 'bebas neue', sans-serif;
   color: white;
   background-color: #376aa2;
@@ -388,6 +387,7 @@ button:focus,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 60px;
 }
 
 .contact-header  {
@@ -400,7 +400,7 @@ button:focus,
   width: 100%;
   max-width: 600px;
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .contact-form  {
@@ -444,79 +444,6 @@ label  {
 .grid p {
   text-align: left;
 }
-
-/* Responsive Design Elements -- small screens */
-@media all and (max-width: 500px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
-  h2  {
-    font-size: 25px;
-  }
-
-  table  {
-    max-width: 500px;
-    width: 100%;
-  }
-
-  th  {
-    font-size: 20px;
-  }
-
-  td  {
-    font-size: 15px;
-  }
-}
-
-/* Responsive Design Elements -- between 500px and 750px screens */
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .grid {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* Responsive Design Elements -- between 0px and 750px screens = shared code */
-@media all and (max-width: 750px)   {
-  .profile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .profile__portrait  {
-    margin: 0 auto;
-  }
-
-  .grid {
-    gap: 10px;
-  }
-
-  h1 {
-    margin: 20px 0 0;
-    font-size: 35px;
-  }
-
-  p  {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-
-  svg#tennis-scene  {
-    max-width: 400px;
-    width: 100%;
-  }
-}
-
 /* Animations */
 
 @-webkit-keyframes color-change {
@@ -642,7 +569,7 @@ label  {
   transform-box: fill-box;
 }
 
-/* grid flow testing*/
+/* Grid large screens greater than 800px */
 
 .grid > div {
   background-color: #f1f1f1;
@@ -652,6 +579,7 @@ label  {
 .grid	 {
   display: -ms-grid;
   display: grid;
+  margin: 10px 0;
   grid-gap: 10px;
           grid-template-areas:
     "a   b   c"
@@ -689,37 +617,133 @@ label  {
   grid-area: c;
 }
 
+/* Responsive Design Elements -- phone screens */
 @media all and (max-width: 500px) {
   .grid	 {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 10px;
-          grid-template-areas:
-      "a"
-      "b"
-      "c"
-      "d"
-      "e";
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+            grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+    }
+    .grid__item-a	 {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1
+    }
+    .grid__item-b	 {
+      -ms-grid-row: 3;
+      -ms-grid-column: 1
+    }
+    .grid__item-d	 {
+      -ms-grid-row: 7;
+      -ms-grid-column: 1
+    }
+    .grid__item-e	 {
+      -ms-grid-row: 9;
+      -ms-grid-column: 1
+    }
+    .grid__item-c	 {
+      -ms-grid-row: 5;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1
+    }
+  
+    .flex-contact {
+      margin: 0;
+    }
+
+  h2  {
+    font-size: 25px;
   }
-  .grid__item-a	 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1
+
+  table  {
+    max-width: 500px;
+    width: 100%;
   }
-  .grid__item-b	 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1
+
+  th  {
+    font-size: 20px;
   }
-  .grid__item-d	 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1
-  }
-  .grid__item-e	 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1
-  }
-  .grid__item-c	 {
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1
+
+  td  {
+    font-size: 15px;
   }
 }
+
+/* Responsive Design Elements -- between 500px and 800px screens */
+@media all and (min-width: 500px) and (max-width: 800px) {
+
+  .grid   {
+    display: -ms-grid;
+    display: grid;
+    margin: 10px 0;
+    grid-gap: 10px;
+    grid-template-areas:
+      "a   b"
+      "c   c"
+      "d   e";
+  }
+
+  .grid__item-a {
+    grid-area: a;
+  }
+
+  .grid__item-b {
+    grid-area: b;
+  }
+
+  .grid__item-c {
+    grid-area: c;
+  }
+
+  .grid__item-d {
+    grid-area: d;
+  }
+
+  .grid__item-e {
+    grid-area: e;
+  }
+
+}
+
+/* Responsive Design Elements -- between 0px and 750px screens = shared code */
+@media all and (max-width: 750px)   {
+  .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .profile__portrait  {
+    margin: 0 auto;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  p  {
+    font-size: 18px;
+  }
+
+  svg#tennis-scene  {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
