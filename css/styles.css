@@ -16,21 +16,45 @@ Secondary color: light teal: #2c797c
   --font-size-navigation: 25px;
 }
 
-html,
-body  {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
 .maincontents  {
-  flex: 1;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 10px 1 fr 10px;
+  grid-template-rows: auto 1 fr auto;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer .";
+  background-color: #fafafa;
 }
 
 .page-header  {
   display: flex;
   width: 100%;
   padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.page-header {
+  grid-area: header;
+  margin-top: 20px;
+}
+
+.main {
+  grid-area: main;
+  align-self: center;
+}
+
+.page-footer {
+  grid-area: footer;
+}
+
+/* navigation */
+
+.page-header  {
+  display: flex;
+  width: 100%;
   margin-bottom: 20px;
   align-items: center;
 }
@@ -84,6 +108,7 @@ body  {
   width: 100%;
   margin-right: 40px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .profile--intro  {
@@ -91,6 +116,8 @@ body  {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 220px;
+  height: 100px;
 }
 
 .about-me  {
@@ -115,10 +142,11 @@ body  {
 
 h1  {
   font-family: 'bebas neue', sans-serif;
-  color: var(--primary-color);
-  display: block;
+  color: #376aa2;
   text-align: center;
   font-size: 45px;
+  vertical-align: top;
+  margin-top: 0;
 }
 
 h2  {
@@ -138,6 +166,8 @@ table  {
   padding: 10px;
   max-width: 500px;
   width: 100%;
+  display: table;
+  margin-top: 30px;
 }
 
 th  {
@@ -225,6 +255,8 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: auto;
+  flex: 0 1 auto;
 }
 
 .page-footer p	{
@@ -239,24 +271,6 @@ button:focus,
   display: block;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.grid__item  {
-  background-color: var(--grid-background);
-  padding: 10px;
-}
-
-.grid	 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.grid__item:last-child	{
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
 }
 
 .flex-contact  {
@@ -320,74 +334,6 @@ label  {
   text-align: left;
 }
 
-/* Responsive Design Elements -- small screens */
-@media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  h2  {
-    font-size: 25px;
-  }
-
-  table  {
-    max-width: 500px;
-    width: 100%;
-  }
-
-  th  {
-    font-size: 20px;
-  }
-
-  td  {
-    font-size: 15px;
-  }
-}
-
-/* Responsive Design Elements -- between 500px and 750px screens */
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* Responsive Design Elements -- between 0px and 750px screens = shared code */
-@media all and (max-width: 750px)   {
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile__portrait  {
-    margin: 0 auto;
-  }
-
-  .grid {
-    gap: 10px;
-  }
-
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-
-  h1 {
-    margin: 20px 0 0;
-    font-size: 35px;
-  }
-
-  p  {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-
-  svg#tennis-scene  {
-    max-width: 400px;
-    width: 100%;
-  }
-}
-
 /* Animations */
 
 @keyframes color-change {
@@ -449,4 +395,140 @@ label  {
   animation: spin 0.5s linear infinite;
   transform-origin: center;
   transform-box: fill-box;
+}
+
+/* Grid large screens greater than 800px */
+
+.grid > div {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.grid	 {
+  display: grid;
+  margin: 10px 0;
+  grid-gap: 10px;
+  grid-template-areas:
+    "a   b   c"
+    "d   e   c";
+}
+
+.grid__item-a {
+  grid-area: a;
+}
+
+.grid__item-b {
+  grid-area: b;
+}
+
+.grid__item-d {
+  grid-area: d;
+}
+
+.grid__item-e {
+  grid-area: e;
+}
+
+.grid__item-c   {
+  grid-area: c;
+}
+
+/* Responsive Design Elements -- phone screens */
+@media all and (max-width: 500px) {
+  .grid	 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e";
+  }
+
+  .flex-contact {
+    margin: 0;
+  }
+
+  h2  {
+    font-size: 25px;
+  }
+
+  table  {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  th  {
+    font-size: 20px;
+  }
+
+  td  {
+    font-size: 15px;
+  }
+}
+
+/* Responsive Design Elements -- between 500px and 800px screens */
+@media all and (min-width: 500px) and (max-width: 800px) {
+
+  .grid   {
+    display: grid;
+    margin: 10px 0;
+    grid-gap: 10px;
+    grid-template-areas:
+      "a   b"
+      "c   c"
+      "d   e";
+  }
+
+  .grid__item-a {
+    grid-area: a;
+  }
+
+  .grid__item-b {
+    grid-area: b;
+  }
+
+  .grid__item-c {
+    grid-area: c;
+  }
+
+  .grid__item-d {
+    grid-area: d;
+  }
+
+  .grid__item-e {
+    grid-area: e;
+  }
+
+}
+
+/* Responsive Design Elements -- between 0px and 800px screens = shared code */
+@media all and (max-width: 800px)   {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__portrait  {
+    margin: 0 auto;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  p  {
+    font-size: 18px;
+  }
+
+  svg#tennis-scene  {
+    max-width: 400px;
+    width: 100%;
+  }
 }

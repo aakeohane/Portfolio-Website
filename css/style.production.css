@@ -149,8 +149,8 @@ Secondary color: light teal: #2c797c
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 220px; 
-  height:100px
+  min-height: 220px;
+  height: 100%;
 }
 
 .about-me  {
@@ -444,6 +444,7 @@ label  {
 .grid p {
   text-align: left;
 }
+
 /* Animations */
 
 @-webkit-keyframes color-change {
@@ -682,36 +683,47 @@ label  {
     display: grid;
     margin: 10px 0;
     grid-gap: 10px;
-    grid-template-areas:
+        grid-template-areas:
       "a   b"
       "c   c"
       "d   e";
   }
 
   .grid__item-a {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: a;
   }
 
   .grid__item-b {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: b;
   }
 
   .grid__item-c {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: c;
   }
 
   .grid__item-d {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
     grid-area: d;
   }
 
   .grid__item-e {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
     grid-area: e;
   }
 
 }
 
-/* Responsive Design Elements -- between 0px and 750px screens = shared code */
-@media all and (max-width: 750px)   {
+/* Responsive Design Elements -- between 0px and 800px screens = shared code */
+@media all and (max-width: 800px)   {
   .profile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -746,4 +758,3 @@ label  {
     width: 100%;
   }
 }
-
