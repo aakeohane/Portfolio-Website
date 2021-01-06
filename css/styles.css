@@ -177,7 +177,7 @@ th  {
   text-align: left;
 }
 
-.profile--webfont	 {
+.profile--webfont {
   color: lime;
   font-family: 'vt323', sans-serif;
   font-size: 25px;
@@ -185,7 +185,7 @@ th  {
   padding: 0 3px;
 }
 
-a	 {
+a {
   transition: 1s color ease;
   color: var(--secondary-color);
   font-family: 'bebas neue', sans-serif;
