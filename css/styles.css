@@ -4,7 +4,7 @@ Text color: light black: #2f2e2e
 Primary color: blue: #376aa2;
 Secondary color: light teal: #2c797c
 */
-* {
+*  {
   box-sizing: border-box;
 }
 
@@ -177,7 +177,7 @@ th  {
   text-align: left;
 }
 
-.profile--webfont {
+.profile--webfont  {
   color: lime;
   font-family: 'vt323', sans-serif;
   font-size: 25px;
@@ -185,7 +185,7 @@ th  {
   padding: 0 3px;
 }
 
-a {
+a  {
   transition: 1s color ease;
   color: var(--secondary-color);
   font-family: 'bebas neue', sans-serif;
@@ -311,7 +311,7 @@ label  {
 
 #contact-form input[type="email"],
 #contact-form input[type="text"],
-#contact-form textarea {
+#contact-form textarea  {
   width: 100%;
   border: 1px solid #ccc;
   background: #fff;
@@ -319,18 +319,18 @@ label  {
   padding: 5px;
 }
 
-#contact-form textarea {
+#contact-form textarea  {
   height: 100px;
   max-width: 100%;
   resize: none;
 }
 
-.form__button {
+.form__button  {
   display: block;
   margin: 10px auto;
 }
 
-.grid p {
+.grid p  {
   text-align: left;
 }
 
@@ -399,12 +399,12 @@ label  {
 
 /* Grid large screens greater than 800px */
 
-.grid > div {
+.grid > div  {
   background-color: #f1f1f1;
   padding: 10px;
 }
 
-.grid	 {
+.grid  {
   display: grid;
   margin: 10px 0;
   grid-gap: 10px;
@@ -413,23 +413,23 @@ label  {
     "d   e   c";
 }
 
-.grid__item-a {
+.grid__item-a  {
   grid-area: a;
 }
 
-.grid__item-b {
+.grid__item-b  {
   grid-area: b;
 }
 
-.grid__item-d {
+.grid__item-d  {
   grid-area: d;
 }
 
-.grid__item-e {
+.grid__item-e  {
   grid-area: e;
 }
 
-.grid__item-c   {
+.grid__item-c  {
   grid-area: c;
 }
 
@@ -471,7 +471,7 @@ label  {
 /* Responsive Design Elements -- between 500px and 800px screens */
 @media all and (min-width: 500px) and (max-width: 800px) {
 
-  .grid   {
+  .grid  {
     display: grid;
     margin: 10px 0;
     grid-gap: 10px;
@@ -481,23 +481,23 @@ label  {
       "d   e";
   }
 
-  .grid__item-a {
+  .grid__item-a  {
     grid-area: a;
   }
 
-  .grid__item-b {
+  .grid__item-b  {
     grid-area: b;
   }
 
-  .grid__item-c {
+  .grid__item-c  {
     grid-area: c;
   }
 
-  .grid__item-d {
+  .grid__item-d  {
     grid-area: d;
   }
 
-  .grid__item-e {
+  .grid__item-e  {
     grid-area: e;
   }
 
@@ -505,7 +505,7 @@ label  {
 
 /* Responsive Design Elements -- between 0px and 800px screens = shared code */
 @media all and (max-width: 800px)   {
-  .profile {
+  .profile  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -515,11 +515,11 @@ label  {
     margin: 0 auto;
   }
 
-  .grid {
+  .grid  {
     gap: 10px;
   }
 
-  h1 {
+  h1  {
     font-size: 35px;
   }
 
