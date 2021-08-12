@@ -42,7 +42,7 @@ Secondary color: light teal: #2c797c
 
 .main {
   grid-area: main;
-  align-self: center;
+  /* align-self: center; */
 }
 
 .page-footer {
@@ -159,21 +159,32 @@ p {
   margin: -5px 0 20px;
 }
 
+/* API Documentation Table */
 table {
-  background-color: var(--grid-background);
-  padding: 10px;
-  max-width: 500px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  font-size: 12px;
   width: 100%;
-  display: table;
-  margin-top: 30px;
 }
 
 th {
-  font-family: "bebas neue", sans-serif;
-  color: var(--primary-color);
-  font-size: 30px;
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
   text-align: left;
 }
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* end table  */
 
 .profile--webfont {
   color: lime;
@@ -250,6 +261,26 @@ button:focus,
 #about__button:focus {
   opacity: 0.8;
   cursor: pointer;
+}
+
+/* contact page */
+
+.contact-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-social-media svg {
+  margin: 10px;
+}
+
+.contact-name {
+  font-size: 30px;
+}
+
+.contact-container {
+  margin: 10% 0;
 }
 
 .page-footer {
@@ -421,7 +452,7 @@ label {
   grid-gap: 10px;
   grid-template-areas:
     "a   b   c"
-    "d   e   c";
+    "d   e   f";
 }
 
 .grid__item-a {
@@ -444,6 +475,10 @@ label {
   grid-area: c;
 }
 
+.grid__item-f {
+  grid-area: f;
+}
+
 /* Responsive Design Elements -- phone screens */
 @media all and (max-width: 500px) {
   .grid {
@@ -454,7 +489,8 @@ label {
       "b"
       "c"
       "d"
-      "e";
+      "e"
+      "f";
   }
 
   .flex-contact {
@@ -487,8 +523,8 @@ label {
     grid-gap: 10px;
     grid-template-areas:
       "a   b"
-      "c   c"
-      "d   e";
+      "c   d"
+      "e   f";
   }
 
   .grid__item-a {
@@ -513,7 +549,8 @@ label {
 }
 
 /* Responsive Design Elements -- between 0px and 800px screens = shared code */
-@media all and (max-width: 800px) {
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
   .profile {
     display: flex;
     flex-direction: column;
@@ -539,5 +576,71 @@ label {
   svg#tennis-scene {
     max-width: 400px;
     width: 100%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  pre {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+  }
+
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: "Description";
+  }
+  td:nth-of-type(2):before {
+    content: "URL Endpoint";
+  }
+  td:nth-of-type(3):before {
+    content: "HTTP Method";
+  }
+  td:nth-of-type(4):before {
+    content: "Request Body Format";
+  }
+  td:nth-of-type(5):before {
+    content: "Response Body Format";
   }
 }
