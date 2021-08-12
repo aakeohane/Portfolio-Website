@@ -6,6 +6,12 @@ Secondary color: light teal: #2c797c
 */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 :root {
@@ -55,32 +61,25 @@ Secondary color: light teal: #2c797c
   display: flex;
   width: 100%;
   margin-bottom: 20px;
-  align-items: center;
 }
 
-.page-header__item {
+.navbar {
   flex: 0 1 100px;
   width: 100px;
 }
 
-.page-header__item:last-child {
+.navbar:last-child {
   flex-grow: 1;
   text-align: right;
 }
 
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
+.nav-menu li {
   display: inline-block;
   margin-left: 15px;
 }
 
-.navigation-list__item--active {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-size: var(--font-size-navigation);
+.page-header--logo {
+  width: 100px;
 }
 
 .navigation-list__item {
@@ -93,6 +92,30 @@ Secondary color: light teal: #2c797c
   text-decoration: none;
   font-size: var(--font-size-navigation);
 }
+
+.navigation-list__item--active {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: var(--font-size-navigation);
+}
+
+/* hamburger nav bar  */
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+/* home page index */
 
 .profile {
   max-width: 700px;
@@ -578,6 +601,8 @@ label {
     width: 100%;
   }
 
+  /* Table Responsiveness */
+
   /* Force table to not be like tables anymore */
   table,
   thead,
@@ -642,5 +667,46 @@ label {
   }
   td:nth-of-type(5):before {
     content: "Response Body Format";
+  }
+
+  /* Hamburger responsiveness */
+  .nav-menu {
+    display: flex;
+    position: fixed;
+    right: -100%;
+    top: 3rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.4s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    right: -50%;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  /* hamburger animations */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
