@@ -9,7 +9,7 @@ function mobileMenu() {
     navList.classList.toggle("active");
 }
 
-// Closes Hamburger Menu
+// Closes Hamburger Menu when clicking the navLink
 const navLink = document.querySelectorAll("navigation-list__item");
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));

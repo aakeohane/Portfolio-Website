@@ -698,7 +698,7 @@ label {
   /* Hamburger responsiveness */
   .nav-menu {
     display: flex;
-    position: absolute;
+    position: fixed;
     right: -100%;
     top: 3rem;
     flex-direction: column;
@@ -720,7 +720,8 @@ label {
 
   .hamburger {
     display: inline-block;
-    margin-right: 10px;
+    right: 20px;
+    position: fixed;
   }
 
   /* hamburger animations */
