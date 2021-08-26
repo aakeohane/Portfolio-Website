@@ -655,7 +655,7 @@ label {
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-left: 50%;
+    padding-left: 40%;
   }
 
   td:before {
@@ -664,7 +664,7 @@ label {
     /* Top/left values mimic padding */
     top: 6px;
     left: 6px;
-    width: 45%;
+    width: 35%;
     padding-right: 10px;
     white-space: nowrap;
   }
@@ -689,10 +689,10 @@ label {
     content: "HTTP Method";
   }
   td:nth-of-type(4):before {
-    content: "Request Body Format";
+    content: "Request Format";
   }
   td:nth-of-type(5):before {
-    content: "Response Body Format";
+    content: "Response Format";
   }
 
   /* Hamburger responsiveness */
@@ -708,6 +708,7 @@ label {
     text-align: left;
     transition: 0.4s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 1;
   }
 
   .nav-menu.active {
@@ -722,6 +723,7 @@ label {
     display: inline-block;
     right: 20px;
     position: fixed;
+    z-index: 2;
   }
 
   /* hamburger animations */
