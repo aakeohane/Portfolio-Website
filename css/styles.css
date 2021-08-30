@@ -174,6 +174,8 @@ h2 {
   font-family: "bebas neue", sans-serif;
   color: var(--primary-color);
   font-size: 35px;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
 }
 
 p {
@@ -256,7 +258,9 @@ a:focus {
 
 button,
 .form__button,
-#about__button {
+#about__button,
+#resume__button,
+#home__button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
@@ -270,6 +274,7 @@ button,
   padding: 10px;
   box-shadow: 0 0 25px -5px var(--secondary-color);
   transition: 0.9s opacity;
+  margin: 1em;
 }
 
 button:hover,
@@ -277,7 +282,11 @@ button:focus,
 .form__button:hover,
 .form__button:focus,
 #about__button:hover,
-#about__button:focus {
+#about__button:focus,
+#resume__button:hover,
+#resume__button:focus,
+#home__button:focus,
+#home__button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -299,7 +308,11 @@ button:focus,
 }
 
 .contact-container {
-  margin: 10% 0;
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-footer {
@@ -616,6 +629,7 @@ label {
 
   h1 {
     font-size: 35px;
+    margin-top: 0.5em;
   }
 
   p {
@@ -737,5 +751,27 @@ label {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* phone screens only */
+@media only screen and (max-width: 450px) {
+  .profile__portrait {
+    max-width: 300px;
+  }
+}
+
+/* teeny teeny screens just for minimization purposes */
+@media only screen and (max-width: 326px) {
+  p {
+    font-size: 15px;
+  }
+
+  h1 {
+    margin-top: 1em;
+  }
+
+  #home__button {
+    text-align: center;
   }
 }
