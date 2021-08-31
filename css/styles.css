@@ -438,20 +438,20 @@ label {
 
 @keyframes color-change {
   0% {
-    fill: #c6ff00;
+    fill: deepskyblue;
   }
 
   50% {
-    fill: #edf09f;
+    fill: darkviolet;
   }
 
   100% {
-    fill: #f38508;
+    fill: blue;
   }
 }
 
 .background__shiftingneon {
-  animation: 4s color-change infinite alternate linear;
+  animation: 8s color-change infinite alternate linear;
 }
 
 @keyframes tennis-ball-flying {
