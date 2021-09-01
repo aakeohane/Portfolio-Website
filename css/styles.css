@@ -142,15 +142,29 @@ li {
   height: 100px;
 }
 
-.about-me {
+.about-me-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.about-me p {
+  text-align: left;
+}
+
+.about-me {
+  flex: 1 60%;
+}
+
+.tennis-container {
+  display: flex;
+  justify-content: center;
+  flex: 1 auto;
 }
 
 svg#tennis-scene {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -257,6 +271,7 @@ a:focus {
 }
 
 button,
+#my-button,
 .form__button,
 #about__button,
 #resume__button,
@@ -279,6 +294,8 @@ button,
 
 button:hover,
 button:focus,
+#my-button:hover,
+#my-button:focus,
 .form__button:hover,
 .form__button:focus,
 #about__button:hover,
@@ -289,6 +306,14 @@ button:focus,
 #home__button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+#about__button {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* contact page */
@@ -347,6 +372,11 @@ button:focus,
 
 .grid a {
   padding: 0 4px;
+}
+
+.grid #my-button {
+  padding: 10px;
+  margin: 5px;
 }
 .technologies-container {
   display: flex;
@@ -434,6 +464,98 @@ label {
   max-width: 100%;
   height: auto;
 }
+
+/* case study */
+.case-study-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.case-study-container p {
+  text-align: left;
+}
+
+.intro-left {
+  margin: 1rem;
+  flex: 1 30%;
+}
+
+.intro-pic-right-container {
+  margin-right: 5%;
+}
+
+.intro-pic-right {
+  max-width: 100%;
+}
+
+.middle-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.middle-section li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.roles-section {
+  margin: 1rem;
+  flex: 1 70%;
+}
+
+.tech-section {
+  margin: 1rem;
+  flex: 3;
+}
+
+.approach-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.approach-section {
+  margin: 1rem;
+  flex: 1 30%;
+}
+
+.comparison-pic-container {
+  margin-right: 5%;
+  margin-top: 10px;
+}
+
+.comparison-pic {
+  width: 700px;
+  max-width: 100%;
+}
+
+.storing-data-section {
+  margin: 1em;
+}
+
+.user-permission-container {
+  margin: 1em;
+}
+
+.permission-pic-section {
+  float: right;
+  margin-right: 15%;
+  margin-top: -100px;
+  margin-left: 5%;
+}
+
+.permission-pic {
+  width: 300px;
+  max-width: 100%;
+}
+
+.final-interface-pic {
+  float: left;
+  width: 300px;
+  max-width: 100%;
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+
 /* Animations */
 
 @keyframes color-change {
@@ -636,11 +758,6 @@ label {
     font-size: 18px;
   }
 
-  svg#tennis-scene {
-    max-width: 400px;
-    width: 100%;
-  }
-
   /* Table Responsiveness */
 
   /* Force table to not be like tables anymore */
@@ -751,6 +868,15 @@ label {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .intro-pic-right-container,
+  .comparison-pic-container {
+    margin: 0 auto;
+  }
+
+  .permission-pic-section {
+    margin-top: 0;
   }
 }
 
