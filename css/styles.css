@@ -877,11 +877,19 @@ label {
 
   .permission-pic-section {
     margin-top: 0;
+    margin: 0 auto;
+    margin-bottom: 1em;
   }
 
   .user-permission-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+  }
+
+  .final-interface-pic {
+    margin: 0 auto;
+    margin-bottom: 1em;
   }
 }
 
