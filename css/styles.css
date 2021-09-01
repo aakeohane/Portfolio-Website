@@ -878,6 +878,11 @@ label {
   .permission-pic-section {
     margin-top: 0;
   }
+
+  .user-permission-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* phone screens only */
