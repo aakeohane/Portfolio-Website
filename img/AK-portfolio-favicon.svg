@@ -3,6 +3,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920px"
 	 height="1920px" viewBox="0 0 1920 1920" enable-background="new 0 0 1920 1920" xml:space="preserve">
+    <!-- inverts svg for dark mode on browsers -->
+    <style>
+      svg {
+        filter: invert(0);
+      }
+      @media (prefers-color-scheme: dark) {
+        svg {
+          filter: invert(100%);
+        }
+      }
+    </style>
 <g id="Layer_1" display="none">
 	
 		<image display="inline" overflow="visible" width="500" height="500" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAEwATAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
