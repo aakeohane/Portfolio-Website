@@ -48,7 +48,6 @@ li {
 
 .main {
   grid-area: main;
-  /* align-self: center; */
 }
 
 .page-footer {
@@ -60,7 +59,7 @@ li {
 .page-header {
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .navbar {
@@ -82,21 +81,75 @@ li {
   width: 100px;
 }
 
-.navigation-list__item {
+/*----- hovering box -----*/
+.nav-menu a {
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #2c797c;
+  font-size: 20px;
+  cursor: pointer;
   text-decoration: none;
-  color: var(--secondary-color);
-  transition: font-size 1s ease;
 }
 
-.navigation-list__item:hover {
-  text-decoration: none;
-  font-size: var(--font-size-navigation);
+.nav-menu span {
+  display: block;
+  padding: 8px 10px 5px 10px;
 }
 
-.navigation-list__item--active {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-size: var(--font-size-navigation);
+.nav-menu a::before,
+.nav-menu a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.3s linear;
+  background: #2f2e2e;
+}
+
+.nav-menu span::before,
+.nav-menu span::after {
+  content: "";
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.3s linear;
+  background: #2f2e2e;
+}
+
+.nav-menu a:hover {
+  color: #2f2e2e;
+}
+
+.nav-menu a:hover::before,
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-menu a:hover span::before,
+.nav-menu a:hover span::after {
+  height: 100%;
+}
+
+.navigation-list__item::after,
+.navigation-list__item span::after {
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.navigation-list__item::before,
+.navigation-list__item span::before {
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+#navigation-list__item--active {
+  border: 2px solid #2f2e2e;
+  color: #2f2e2e;
+  border-radius: 2px;
+  pointer-events: none;
 }
 
 /* hamburger nav bar  */
@@ -118,7 +171,7 @@ li {
 /* home page index */
 
 .profile {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -138,8 +191,10 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 220px;
-  height: 100px;
+}
+
+.profile--headerfont {
+  letter-spacing: 2px;
 }
 
 .about-me-container {
@@ -276,10 +331,7 @@ button,
 #about__button,
 #resume__button,
 #home__button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
   display: inline-block;
-
   /* styling */
   font-family: "bebas neue", sans-serif;
   color: white;
@@ -287,9 +339,9 @@ button,
   text-decoration: none;
   border-radius: 3px;
   padding: 10px;
-  box-shadow: 0 0 25px -5px var(--secondary-color);
-  transition: 0.9s opacity;
   margin: 1em;
+  box-shadow: transparent;
+  transition: background-color 0.9s, box-shadow 0.9s, color 0.9s;
 }
 
 button:hover,
@@ -304,7 +356,10 @@ button:focus,
 #resume__button:focus,
 #home__button:focus,
 #home__button:hover {
-  opacity: 0.8;
+  background-color: white;
+  color: #2f2e2e;
+  box-shadow: 0 0 25px -5px #2f2e2e;
+  border-radius: 3px;
   cursor: pointer;
 }
 
