@@ -81,7 +81,7 @@ li {
   width: 100px;
 }
 
-/*----- hovering box -----*/
+/*----- nav menu box created when hovering -----*/
 .nav-menu a {
   display: inline-block;
   position: relative;
@@ -104,7 +104,7 @@ li {
   width: 0;
   height: 2px;
   position: absolute;
-  transition: all 0.3s linear;
+  transition: all 0.4s linear;
   background: #2f2e2e;
 }
 
@@ -114,7 +114,7 @@ li {
   width: 2px;
   height: 0;
   position: absolute;
-  transition: all 0.3s linear;
+  transition: all 0.4s linear;
   background: #2f2e2e;
 }
 
