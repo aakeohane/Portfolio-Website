@@ -430,6 +430,25 @@ button:focus,
   padding: 0 4px;
 }
 
+.item-a--buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-a--JS-React {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item-a--JS-React > span {
+  margin: 0 auto 0 0;
+}
+
+.item-a--JS-React > div {
+  margin-left: auto;
+}
+
 .grid #my-button {
   padding: 10px;
   margin: 5px;
