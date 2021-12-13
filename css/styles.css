@@ -281,14 +281,6 @@ tr:nth-child(even) {
 
 /* end table  */
 
-.profile--webfont {
-  color: lime;
-  font-family: "vt323", sans-serif;
-  font-size: 25px;
-  background-color: black;
-  padding: 0 3px;
-}
-
 a {
   transition: 1s color ease;
   color: var(--secondary-color);
