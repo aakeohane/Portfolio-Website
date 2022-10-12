@@ -150,6 +150,7 @@ li {
 
 .hamburger {
   display: none;
+  padding: 5px;
 }
 
 .bar {
@@ -996,6 +997,13 @@ label {
   }
 
   /* hamburger animations */
+
+  .hamburger.active {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
