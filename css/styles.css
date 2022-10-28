@@ -4,7 +4,7 @@ Text color: light black: #2f2e2e
 Primary color: blue: #376aa2;
 Secondary color: light teal: #2c797c
 */
-* {
+*, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
