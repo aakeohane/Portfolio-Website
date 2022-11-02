@@ -140,9 +140,10 @@ li {
 }
 
 #navigation-list__item--active {
-  border: 2px solid #2f2e2e;
+  outline: 2px solid #2f2e2e;
+  outline-offset: -2px;
   color: #2f2e2e;
-  border-radius: 2px;
+  border-radius: 1px;
   pointer-events: none;
 }
 
