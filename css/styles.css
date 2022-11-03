@@ -326,7 +326,7 @@ button,
   color: var(--secondary-color);
   text-decoration: none;
   border-radius: 3px;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--secondary-color);
   padding: 10px;
   margin: 1em;
   transition: .5s;
@@ -334,16 +334,22 @@ button,
 
 button:hover,
 button:focus,
+button:active,
 #my-button:hover,
 #my-button:focus,
+#my-button:active,
 .form__button:hover,
 .form__button:focus,
+.form__button:active,
 #about__button:hover,
 #about__button:focus,
+#about__button:active,
 #resume__button:hover,
 #resume__button:focus,
+#resume__button:active,
 #home__button:focus,
-#home__button:hover {
+#home__button:hover,
+#home__button:active {
   color: white;
   box-shadow: inset 0 -3.25em 0 0 var(--primary-color);
   cursor: pointer;
