@@ -1,0 +1,194 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wordle-title {
+  font-size: 3em;
+  margin-bottom: .2em;
+}
+
+.wordle-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  font-family: "bebas neue", sans-serif;
+  font-weight: 900;
+  position: relative;
+}
+
+/* keyboard styling */
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.25rem 0;
+}
+
+.keyboard-button {
+  border: 2px solid white;
+  font-family: "bebas neue", sans-serif;
+  color: var(--primary-color);
+  font-size: 28px;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Notification styling */
+
+#notification {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color:white;
+  border-radius: 5px;
+}
+
+.temp-notification { 
+  padding: 15px 10px;
+  animation: fadeOut .5s;
+  animation-delay: 1.5s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background:rgba(0,0,0);
+  font-weight: 900;
+  text-align: center;
+}
+
+@keyframes fadeOut {
+  100% { opacity: 0; }
+  0% { opacity: 1; }
+}
+
+.win-lose-notification {  
+  padding: 15px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background:rgba(0,0,0, .7);
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.not-enough:before {
+  content:"Not enough letters";
+}
+
+.not-word:before {
+  content:"Not in words list!";
+}
+
+.correct-guess:before {
+  content: "Congrats, you got it! So smart!";
+}
+
+.incorrect-guess:before {
+  content: attr(notification);
+}
+
+.correct-guess:after {
+  content: "X";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  right: -10px;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* board styling */
+
+.letter-row {
+  display: flex;
+}
+
+.letter-box {
+  height: 60px;
+  width: 60px;
+  margin: 2.5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid lightgray;
+  border-radius: 1px;
+}
+
+.chosen-letter {
+  border: 2px solid #6a6a6b;
+}
+
+.grey {
+  border: 2px solid #787c7e;
+  background-color: #787c7e;
+  color: white;
+}
+
+.yellow {
+  border: 2px solid #c9b458;
+  background-color: #c9b458;
+  color: white;
+}
+
+.green {
+  border: 2px solid #69aa65;
+  background-color: #69aa65;
+  color: white;
+}
+
+@media only screen and (max-width: 767px) { 
+  h1 {
+    font-size: 2.5em;
+    margin: 10px;
+  }
+
+  .keyboard-button {
+    padding: 1rem .5rem;
+  }
+
+  .flex {
+    flex: 0 1 auto;
+  }
+}
+
+@media only screen and (max-width: 280px) { 
+  .letter-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .keyboard-button {
+    flex: 0 0 auto;
+    padding: .75rem .15rem;
+  }
+}

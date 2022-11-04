@@ -245,13 +245,22 @@ h2 {
   margin-bottom: 1em;
 }
 
+.error-code {
+  font-family: "bebas neue", sans-serif;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 8em;
+  line-height: .8em;
+  text-shadow: 0 3px 10px rgb(0 0 0 / 0.2)
+}
+
 h4 {
   font-family: "bebas neue", sans-serif;
-  color: #376aa2;
+  color: var(--primary-color);
   text-align: center;
-  font-size: 10em;
-  vertical-align: top;
-  margin-top: -10rem;
+  font-size: 2.5em;
+  margin-bottom: .5em;
+  text-shadow: 0 3px 10px rgb(0 0 0 / 0.2)
 }
 
 p {
@@ -348,7 +357,7 @@ a:focus {
   filter: invert(28%) sepia(57%) saturate(2313%) hue-rotate(176deg) brightness(95%) contrast(89%);
 }
 
-button,
+#error-button,
 #my-button,
 .form__button,
 #about__button,
@@ -363,11 +372,17 @@ button,
   padding: 10px;
   margin: 1em;
   transition: .5s;
+  background-color: transparent;
 }
 
-button:hover,
-button:focus,
-button:active,
+#error-button {
+  margin: 0 0 1em 0;
+  font-size: 1.25em;
+}
+
+#error-button:hover,
+#error-button:focus,
+#error-button:active,
 #my-button:hover,
 #my-button:focus,
 #my-button:active,
@@ -421,7 +436,11 @@ button:active,
   align-items: center;
 }
 
-.error-container {
+.error-left-container {
+  padding-top: 5em;
+}
+
+.error-content-container {
   margin: 0 auto;
   width: 100%;
   max-width: 30em;
