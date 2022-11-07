@@ -1,3 +1,10 @@
+/* CSS for wordle on 404 page */
+
+/* This should remove the double tap zoom feature on browsers */
+* {
+  touch-action: manipulation;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
